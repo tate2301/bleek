@@ -14,14 +14,14 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="application-name" content={APP_NAME} />
+          <meta name="application-name" content={"Bleek"} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content={APP_NAME} />
-          <meta name="description" content={APP_DESCRIPTION} />
+          <meta name="apple-mobile-web-app-title" content={"Bleek"} />
+          <meta name="description" content="The intuitive social network for sharing code snippets." />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#FFFFFF" />
