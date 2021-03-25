@@ -1,39 +1,20 @@
-import { Button } from "@chakra-ui/button";
+import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { Image } from "@chakra-ui/image";
-import { Box, Heading, Text, Link as ChakraLink } from "@chakra-ui/layout";
-import Link from "next/link";
+import { Box, Flex } from "@chakra-ui/layout";
+import { RiMoonFill, RiSunLine } from "react-icons/ri";
 
-const Page404 = () => {
-  const { colorMode } = useColorMode();
+const Home = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <>
-      <Box width={["100%", "70%", "60%", "60%"]} margin="0 auto">
-        <Image src="/404 Error-pana.svg" />
-      </Box>
-      <Text textAlign="center" fontSize="xs">
-        <ChakraLink href="https://stories.freepik.com/web" isExternal>
-          Illustration by Freepik Stories
-        </ChakraLink>
-      </Text>
-
-      <Box marginY={4}>
-        <Heading textAlign="center">Page not Found.</Heading>
-
-        <Box textAlign="center" marginTop={4}>
-          <Text>It's Okay!</Text>
-          <Link href="/" passHref>
-            <Button
-              backgroundColor={colorMode === "light" ? "gray.300" : "teal.500"}
-            >
-              Let's Head Back
-            </Button>
-          </Link>
-        </Box>
-      </Box>
-    </>
+    <Flex mb={8} w="screen" h="screen" justifyContent="center">
+      <IconButton
+            aria-label="theme toggle"
+            icon={colorMode === "light" ? <RiMoonFill /> : <RiSunLine />}
+            onClick={toggleColorMode}
+          />
+    </Flex>
   );
 };
 
-export default Page404;
+export default Home;

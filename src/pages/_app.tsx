@@ -2,8 +2,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-import Layout from "../components/layout";
-
 import customTheme from "../styles/customTheme";
 import "../styles/globals.css";
 
@@ -15,10 +13,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
+        <title>Bleek - The social platform for sharing code snippets</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 };
